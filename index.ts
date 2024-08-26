@@ -1,6 +1,6 @@
 import express from "express";
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
@@ -9,5 +9,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Now listening on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
